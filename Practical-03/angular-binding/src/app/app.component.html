@@ -1,0 +1,11 @@
+<div>
+  <input 
+    type="text" 
+    [value]="this.inputValue"
+    (input)="onInputChange($event)"
+  >
+  <button (click)="showInput()">
+    Show Input value in console 
+  </button>
+  <div>Current Value : {{this.inputValue}}</div>
+</div>
