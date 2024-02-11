@@ -1,0 +1,30 @@
+<div>
+    <h1>Component Created using NgClass</h1>
+    <div>
+      <div
+        [ngClass]="{
+            'underline': this.underline,
+            'bold': this.bold,
+            'italic': this.italic
+        }" 
+      >Learning Angular seems interesting</div>
+      <div>
+        Bold <input type="checkbox" name="" id=""  [(ngModel)]="this.bold">
+        Italic <input type="checkbox" name="" id=""  [(ngModel)]="this.italic">
+        Underline <input type="checkbox" name="" id=""  [(ngModel)]="this.underline">
+      </div>
+    </div>
+</div>
+<style>
+    .underline{
+        text-decoration: underline;
+    }
+
+    .bold{
+        font-weight: bold;
+    }
+
+    .italic{
+    font-style: italic;
+    }
+</style>

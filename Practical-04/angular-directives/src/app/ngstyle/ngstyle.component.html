@@ -1,0 +1,15 @@
+<div>
+  <h1>Component created using NgStyle</h1>
+  <div>
+    <div
+      [ngStyle]="{
+        'font-size' : true ? this.fontSize+'px' : '10px' 
+      }"
+    >Learing Angular Seems Interesting</div>
+    <div>
+      <button (click)="changeFont('-')">-</button>
+      <input [value]='this.fontSize' type="number" name="" style="width: 30px;" id="" [(ngModel)]="this.fontSize">
+      <button (click)="changeFont('+')">+</button>
+    </div>
+  </div>
+</div>
