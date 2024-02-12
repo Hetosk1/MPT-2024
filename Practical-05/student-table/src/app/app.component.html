@@ -1,0 +1,24 @@
+<div>
+  <table cellPadding="5">
+    <thead>
+      <tr style="background-color: #535C91">
+        <th>Number</th>
+        <th>Name</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr 
+        *ngFor="let student of students"
+        [ngStyle]="{
+          'background-color': students.indexOf(student) % 2 === 0 ? '#9290C3': '#fff',
+          'color': students.indexOf(student) % 2 !== 0 ? '#9290C3': '#fff'
+        }" 
+        >
+        <td>{{students.indexOf(student) + 1}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.score}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
