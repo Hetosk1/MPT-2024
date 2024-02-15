@@ -1,0 +1,32 @@
+<div>
+  <form #studentForm="ngForm" (ngSubmit)="onSubmit(studentForm)">  
+      <div>
+        <input type="text" name="name" placeholder="Student's name" ngModel required>
+        <input type="number" name="age" placeholder="Student's age" ngModel required>
+        <button type="submit">Add</button>
+      </div>
+  </form>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>#Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of this.students">
+          <td>{{student.id}}</td>
+          <td>{{student.name}}</td>
+          <td>{{student.age}}</td>
+          <td>
+            <button (click)="delete(student.id - 1)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
